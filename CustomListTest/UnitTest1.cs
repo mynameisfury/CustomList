@@ -7,8 +7,24 @@ namespace CustomListTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Add_AddToList_AddedToEndOfList()
         {
+            //arrange
+            
+            //act
+
+            //assert
+
+        }
+
+        public void Remove_RemoveFromList()
+        {
+            //arrange
+
+            //act
+
+            //assert
+
         }
     }
 }

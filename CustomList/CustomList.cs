@@ -6,7 +6,27 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    class CustomList
+    public class CustomList <T>
     {
+        public void Add()
+        {
+
+        }
+        public void Remove()
+        {
+
+        }
+
+        //iteration
+
+        //plus
+
+        //minus
+
+        //zipping
+
+        //count
+
+
     }
 }
