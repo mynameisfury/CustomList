@@ -8,6 +8,7 @@ namespace CustomList
 {
     public class CustomList <T>
     {
+
         public void Add()
         {
 
@@ -15,6 +16,11 @@ namespace CustomList
         public void Remove()
         {
 
+        }
+
+        override public string ToString()
+        {
+            return "poop";
         }
 
         //iteration
@@ -26,6 +32,7 @@ namespace CustomList
         //zipping
 
         //count
+
 
 
     }

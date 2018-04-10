@@ -16,8 +16,7 @@ namespace CustomListTest
             //assert
 
         }
-
-        public void Remove_RemoveFromList()
+        public void Remove_RemoveFromList_ItemIsRemoved()
         {
             //arrange
 
@@ -26,5 +25,16 @@ namespace CustomListTest
             //assert
 
         }
+        public string ToString_CheckIfString_IsString()
+        {
+            //arrange
+
+            //act
+
+            //assert
+
+        }
+
+
     }
 }
