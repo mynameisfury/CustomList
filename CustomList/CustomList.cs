@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomList <T>
+    public class CustomList<T>
     {
+        T[] array;
+        int capacity;
 
+        public CustomList()
+        {
+            capacity = 5;
+            array = new T[capacity];
+        }
         public void Add()
         {
 
@@ -20,12 +27,16 @@ namespace CustomList
 
         override public string ToString()
         {
-            return "poop";
+            return "string";
         }
 
         //iteration
 
         //plus
+        //public static Complex operator+()
+        //    {
+            
+        //    }
 
         //minus
 

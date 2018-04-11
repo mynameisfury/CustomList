@@ -16,6 +16,9 @@ namespace CustomListTest
             //assert
 
         }
+
+        //check index, count, capacity
+
         public void Remove_RemoveFromList_ItemIsRemoved()
         {
             //arrange
@@ -25,7 +28,7 @@ namespace CustomListTest
             //assert
 
         }
-        public string ToString_CheckIfString_IsString()
+        public void ToString_CheckIfString_IsString()
         {
             //arrange
 
