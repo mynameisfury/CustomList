@@ -11,7 +11,7 @@ namespace CustomList
         static void Main(string[] args)
         {
             List<string> list = new List<string>();
-            list.Add("poooooooooop");
+            list.Count();
             Console.WriteLine(list);
             Console.ReadLine();
         }

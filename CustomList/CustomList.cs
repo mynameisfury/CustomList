@@ -1,26 +1,36 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CustomList;
 
 namespace CustomList
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable<T>
     {
-        T[] array;
+        public T[] array;
         int capacity;
+        private int count;
+        public int Count
+        {
+            get { return count; }
+            private set { count = value; }
+        }
 
         public CustomList()
         {
             capacity = 5;
             array = new T[capacity];
         }
-        public void Add()
+        public void Add(T item)
         {
+            
+
 
         }
-        public void Remove()
+        public void Remove(T item)
         {
 
         }
@@ -30,12 +40,22 @@ namespace CustomList
             return "string";
         }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
         //iteration
 
         //plus
         //public static Complex operator+()
         //    {
-            
+
         //    }
 
         //minus
@@ -44,7 +64,7 @@ namespace CustomList
 
         //count
 
-
+        
 
     }
 }
