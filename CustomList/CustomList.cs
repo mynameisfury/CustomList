@@ -11,6 +11,11 @@ namespace CustomList
     public class CustomList<T> : IEnumerable<T>
     {
         public T[] array;
+        public T this[int i]
+        {
+            get { return array[i]; }
+            set { array[i] = value; }
+        }
         int capacity;
         private int count;
         public int Count
