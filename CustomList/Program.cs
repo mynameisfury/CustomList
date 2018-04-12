@@ -12,6 +12,7 @@ namespace CustomList
         {
             List<string> list = new List<string>();
             list.Count();
+            
             Console.WriteLine(list);
             Console.ReadLine();
         }

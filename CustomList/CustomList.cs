@@ -24,6 +24,7 @@ namespace CustomList
             private set { count = value; }
         }
 
+
         public CustomList()
         {
             capacity = 5;
@@ -36,6 +37,10 @@ namespace CustomList
 
         }
         public void Remove(T item)
+        {
+
+        }
+        public void RemoveAt(int index)
         {
 
         }
