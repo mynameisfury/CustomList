@@ -53,6 +53,7 @@ namespace CustomListTest
             CustomList<int> customList = new CustomList<int>();
             //act
             customList.Add(5);
+            customList.Add(3);
             customList.Remove(3);
             customList.Add(4);
             //assert
@@ -66,11 +67,37 @@ namespace CustomListTest
             CustomList<int> customList = new CustomList<int>();
             //act
             customList.Add(5);
+            customList.Add(3);
             customList.Remove(3);
             customList.Add(4);
             //assert
             Assert.AreEqual(customList[1], 4);
 
+        }
+        
+        [TestMethod]
+        public void Remove_ItemNotFound_ErrorDisplayed()
+        {
+            //arrange
+            CustomList<int> customList = new CustomList<int>();
+            //act
+            customList.Add(5);
+            customList.Remove(3);
+            customList.Add(4);
+            //assert
+            Assert.AreEqual(customList[1], 4);
+        }
+        [TestMethod]
+        public void RemoveAt_IndexNotFound_ErrorDisplayed()
+        {
+            //arrange
+            CustomList<int> customList = new CustomList<int>();
+            //act
+            customList.Add(5);
+            customList.RemoveAt(6);
+            customList.Add(4);
+            //assert
+            Assert.AreEqual(customList[1], 4);
         }
         [TestMethod]
         public void ToString_CheckIfString_IsString()
