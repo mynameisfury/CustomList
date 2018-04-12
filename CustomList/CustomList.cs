@@ -40,6 +40,12 @@ namespace CustomList
             return "string";
         }
 
+        public CustomList<T> Zip(CustomList<T> ListTwo)
+        {
+            CustomList<T> thirdList = 
+            return thirdList;
+        }
+
         public IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
@@ -62,7 +68,7 @@ namespace CustomList
 
         //zipping
 
-        //count
+        
 
         
 

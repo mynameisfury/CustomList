@@ -86,18 +86,52 @@ namespace CustomListTest
             //assert
             Assert.AreEqual(customList, "4, 3, 6, 5");
         }
+        [TestMethod]
         public void ToString_ToStringANull_ErrorMessage()
         {
             //arrange
             CustomList<string> customList = new CustomList<string>();
             //act
-            customList.Add();
+            customList.Add(null);
             customList.ToString();
             //assert
-            Assert.AreEqual(customList[0], null);
+            Assert.AreEqual(customList, null);
         }
-        
-
+        [TestMethod]
+        public void Zip_ZipTwoLists_ListsAreZippeed()
+        {
+            //arrange
+            CustomList<string> customList = new CustomList<string>();
+            CustomList<string> customList2 = new CustomList<string>();
+            CustomList<string> customList3 = new CustomList<string>();
+            //act
+            customList.Add("This");
+            customList.Add("is");
+            customList.Add("together");
+            customList2.Add("string");
+            customList2.Add("zipped");
+            customList2.Add("!");
+            customList3 = customList.Zip(customList2);
+            customList3.ToString();
+            //assert
+            Assert.AreEqual(customList3, "This","string","is","zipped","together","!");
+        }
+        [TestMethod]
+        public void Zip_ZippingANullList_ExceptionHandled()
+        {
+            CustomList<string> customList = new CustomList<string>();
+            CustomList<string> customList2 = new CustomList<string>();
+            CustomList<string> customList3 = new CustomList<string>();
+            //act
+            customList.Add("This");
+            customList.Add("is");
+            customList.Add("together");
+            customList2.Add(null);
+            customList3 = customList.Zip(customList2);
+            //customList3.ToString();
+            //assert
+            Assert.AreEqual(customList3, null);
+        }
 
     }
 }
