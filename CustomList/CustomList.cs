@@ -32,6 +32,11 @@ namespace CustomList
         }
         public void Add(T item)
         {
+            for (int i = 0; i < capacity; i++)
+            {
+                array[i] = item;
+
+            }
             
 
 
@@ -52,7 +57,7 @@ namespace CustomList
 
         public CustomList<T> Zip(CustomList<T> ListTwo)
         {
-            CustomList<T> thirdList = 
+            CustomList<T> thirdList = new CustomList<T>();
             return thirdList;
         }
 

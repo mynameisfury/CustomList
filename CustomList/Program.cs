@@ -10,11 +10,8 @@ namespace CustomList
     {
         static void Main(string[] args)
         {
-            List<string> list = new List<string>();
-            list.Count();
-            
-            Console.WriteLine(list);
-            Console.ReadLine();
+            Test test = new Test();
+            test.DisplayList();
         }
     }
 }
