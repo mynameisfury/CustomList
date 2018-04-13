@@ -15,8 +15,16 @@ namespace CustomListTest
             //act
             customList.Add(2);
             customList.Add(3);
+            customList.Add(3);
+            customList.Add(7);
+            customList.Add(4);
+            customList.Add(9);
+            customList.Add(8);
+            customList.Add(45);
+            customList.Add(1);
+            customList.Add(2);
             //assert
-            Assert.AreEqual(customList.array[1], 3);
+            Assert.AreEqual(customList.array[9], 2);
         }
         [TestMethod]
         public void Add_AddToList_CountIncrements()

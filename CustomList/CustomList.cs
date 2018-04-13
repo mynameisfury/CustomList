@@ -24,7 +24,6 @@ namespace CustomList
             private set { count = value; }
         }
 
-
         public CustomList()
         {
             capacity = 5;
@@ -32,18 +31,24 @@ namespace CustomList
         }
         public void Add(T item)
         {
-            for (int i = 0; i < capacity; i++)
+            if (count == (capacity / 2))
             {
-                array[i] = item;
-
+                capacity *= 2;
+                array = new T[capacity];
             }
-            
-
-
+            array[count] = item;
+            count++;           
         }
+
         public void Remove(T item)
         {
-
+            for (int i = 0; i < count; i++)
+            {
+                if (array[i] == item)
+                {
+                    array = new T[capacity];
+                }
+            }
         }
         public void RemoveAt(int index)
         {
@@ -52,7 +57,11 @@ namespace CustomList
 
         override public string ToString()
         {
-            return "string";
+            for (int i = 0; i < count; i++)
+            {
+                
+            }
+            return "";
         }
 
         public CustomList<T> Zip(CustomList<T> ListTwo)
