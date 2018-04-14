@@ -13,6 +13,8 @@ namespace CustomList
             CustomList<string> list = new CustomList<string>();
             list.Add("3");
             list.Add("8");
+            list.Add("5");
+            list.Remove("8");
             Console.WriteLine(list);
             Console.ReadLine();
         }

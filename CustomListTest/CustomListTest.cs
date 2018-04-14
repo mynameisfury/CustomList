@@ -62,8 +62,9 @@ namespace CustomListTest
             //act
             customList.Add(5);
             customList.Add(3);
-            customList.Remove(3);
+            
             customList.Add(4);
+            customList.Remove(3);
             //assert
             Assert.AreEqual(customList.Count, 2);
 
@@ -75,9 +76,9 @@ namespace CustomListTest
             CustomList<int> customList = new CustomList<int>();
             //act
             customList.Add(5);
-            customList.Add(3);
-            customList.Remove(3);
+            customList.Add(3);            
             customList.Add(4);
+            customList.Remove(3);
             //assert
             Assert.AreEqual(customList[1], 4);
 

@@ -8,7 +8,7 @@ using CustomList;
 
 namespace CustomList
 {
-    public class CustomList<T> : IEnumerable<T>
+    public class CustomList<T>  : IEnumerable<T> 
     {
         public T[] array;
         public T this[int i]
@@ -34,7 +34,11 @@ namespace CustomList
             if (count == (capacity / 2))
             {
                 capacity *= 2;
-                array = new T[capacity];
+                T[] array2 = new T[capacity];
+                for (int i = 0; i<count; i++)
+                {
+                    array2[i] = array[i];
+                }
             }
             array[count] = item;
             count++;           
@@ -42,12 +46,20 @@ namespace CustomList
 
         public void Remove(T item)
         {
+
             for (int i = 0; i < count; i++)
             {
-                if (array[i] == item)
+                
+                if (EqualityComparer<T>.Default.Equals(item, array[i]))
                 {
-                    array = new T[capacity];
+                    for (; i < count; i++)
+                    {
+                        array[i] = array[i + 1];                        
+                    }
+                    array[count - 1] = default(T);
+                    count--;
                 }
+
             }
         }
         public void RemoveAt(int index)
